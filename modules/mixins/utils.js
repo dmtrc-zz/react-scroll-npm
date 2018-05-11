@@ -8,7 +8,7 @@ var pushHash = function pushHash(hash) {
 
   if (history.pushState) {
     var loc = window.location;
-    history.pushState(null, null, hash ? hash
+    history.pushState(null, null, hash ? loc.pathname + loc.search + hash
     // remove hash
     : loc.pathname + loc.search);
   } else {
